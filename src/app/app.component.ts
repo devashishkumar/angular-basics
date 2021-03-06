@@ -7,12 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basics';
-
-  login() {
-    localStorage.setItem('user', 'ashish');
-  }
-
-  logout() {
-    localStorage.removeItem('user');
-  }
 }

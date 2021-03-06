@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { SitenavComponent } from './sitenav/sitenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormHandlingComponent } from './form-handling/form-handling.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     NotfoundComponent,
     SitenavComponent,
-    DashboardComponent
+    DashboardComponent,
+    FormHandlingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

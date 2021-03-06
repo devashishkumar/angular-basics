@@ -1,0 +1,17 @@
+<p>form-handling works!</p>
+
+<form>
+    <input type="text" class="form-control" id="firstname" [(ngModel)]="serviceData.firstname" name="firstname" (ngModelChange)="checkFormData($event)" placeholder="First Name">
+    <br/>
+    <input type="text" class="form-control" id="lastname" [(ngModel)]="serviceData.lastname" name="lastname" (ngModelChange)="checkFormData($event)" placeholder="Last Name">
+    <br/>
+    <input type="text" class="form-control" id="email" [(ngModel)]="serviceData.email" name="email" (ngModelChange)="checkFormData($event)" placeholder="Email">
+    <br/>
+
+    <select [(ngModel)]="serviceData.option" class="form-control" id="option" name="option">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+
+    </select>
+
+</form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sitenav',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitenavComponent implements OnInit {
 
-  constructor() { }
+  isUserLoggedIn: boolean = false;
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.isUserLoggedIn = localStorage.getItem('user') !== null;
+  }
+
+  login() {
+    localStorage.setItem('user', 'ashish');
+    this.isUserLoggedIn = true;
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.isUserLoggedIn = false;
+    this.router.navigate(['/login']);
+
   }
 
 }
