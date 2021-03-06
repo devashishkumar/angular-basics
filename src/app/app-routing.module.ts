@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { CanloadserviceGuard } from './canloadservice.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DeactivateGuard } from './deactivate.guard';
 import { FormHandlingComponent } from './form-handling/form-handling.component';
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'forms', component: FormHandlingComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  // { path: 'users', loadChildren: './users/users.module#UsersModule'},
+  { path: 'users', loadChildren: './users/users.module#UsersModule', canLoad: [CanloadserviceGuard] },
   // { path: 'dashboard', component: DashboardComponent, canLoad: [AuthGuard] },
   { path: '**', component: NotfoundComponent },
 ];

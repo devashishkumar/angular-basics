@@ -11,6 +11,7 @@ import { SitenavComponent } from './sitenav/sitenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormHandlingComponent } from './form-handling/form-handling.component';
 import { FormsModule } from '@angular/forms';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     FormHandlingComponent
   ],
   imports: [
+    UsersModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
